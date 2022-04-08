@@ -1,0 +1,114 @@
+.navbar-container{
+    position: fixed;
+    top: 0;
+    background-color: white;
+    left: 0;
+    z-index: 2;
+    right: 0;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(173,170,173,1);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(173,170,173,1);
+    box-shadow: 0px 1px 5px 0px rgba(173,170,173,1);
+}
+.navbar-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.links-wrapper{
+    display: flex;
+
+}
+.link-item{
+    list-style: none;
+    text-decoration: none;
+    margin-right: 32px;
+    font-size: 18px;
+    color: rgb(121, 116, 116);
+    font-weight: 500;
+    outline: none;
+}
+.link-item:hover{
+    color: rgb(199, 197, 197);
+}
+
+.logo{
+    font-size: 28px;
+    color: #75bcf7;
+    font-weight: 700;
+}
+
+.active{
+    color: rgb(199, 197, 197);
+}
+
+.toggle-btn{
+    position: absolute;
+    top:0;
+    right: 0;
+    box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    border-radius: 3px;
+    padding: 2px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    margin:12px;
+    z-index: 3;
+    -webkit-box-shadow: 0px 1px 2px 1px rgba(4,5,5,0.2);
+    -moz-box-shadow: 0px 1px 2px 1px rgba(4,5,5,0.2);
+    box-shadow: 0px 1px 2px 1px rgba(4,5,5,0.2);
+}
+.toggle-btn span{
+    width: 100%;
+    margin-bottom: 2px;
+    height: 2px;
+    background-color: black;
+}
+.links-wrapper-btn{
+    flex-direction: column;
+    margin-top: 30px;
+    height: fit-content;
+    visibility: visible;
+    transition: all 0.2s ease;
+    display: flex;
+}
+
+/* media query for mobile responsive */
+
+@media screen and (max-width:900px){
+    .toggle-btn{
+        display: flex;
+    }
+    .navbar-container{
+        flex-direction: column;
+        height: fit-content;
+        z-index: 2;
+        justify-content: start;
+        padding: 4px 12px;
+    }
+    .navbar-wrapper{
+        position: relative;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 25px;
+    }
+    .links-wrapper{
+        flex-direction: column;
+        height: 0;
+        visibility: hidden;
+
+    }
+    .logo{
+        font-size: 34px;
+    }
+    .link-item{
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+}

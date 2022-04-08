@@ -1,0 +1,130 @@
+.about-container{
+    margin-top: 70px;
+    height: 100vh;
+    padding: 8px 30px;
+}
+.about-wrapper{
+    height: 60%;
+    display: flex;
+ 
+}
+.about-title{
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #212121;
+}
+
+.about-detail-wrapper{
+    flex: 8;
+    height: 100%;
+    padding: 4px 30px;
+}
+.about-image-wrapper{
+    flex: 4;
+    height:70%;
+}
+.about-img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.about-heading{
+    font-size: 24px;
+    font-weight: 500;
+    margin: 25px 0px;
+    color: rgb(90, 88, 88);
+}
+
+.about-desc{
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: rgb(121, 117, 117);
+}
+.about-bottom{
+    display: flex;
+    height: 80vh;
+}
+
+.bottom-wrapper{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    /* padding-top: 20px; */
+    justify-content: space-evenly;
+    position: relative;
+    transition: all 0.5s ease;
+    background-color: rgb(238, 247, 247);
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.author-wrapper{
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    cursor: pointer;
+}
+.author-detail{
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.author-social{
+    display: flex;
+}
+.author-social-icon{
+    margin: 6px 8px;
+}
+.author-img{
+    display: flex;
+}
+.avatar{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.author-img:hover~.author-desc{
+    opacity: 1;
+}
+.author-desc{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    padding: 12px;
+    right:0;
+    font-weight: 300;
+    font-size: 18px;
+    color: rgb(65, 61, 61);
+    top: 350px;
+    width: 90%;
+    height: 200px;
+    margin: auto;
+    background-color: aliceblue;
+    letter-spacing: 1px;
+    text-align: justify;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+@media screen and (max-width:730px){
+    .about-wrapper{
+        height: fit-content;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-container{
+        padding: 0;
+    }
+    .author-desc{
+        position: static;
+        height: fit-content;
+    }
+}
